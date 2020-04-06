@@ -59,7 +59,7 @@ ForEach ($db in $dbsToDettach)
 Write-Host "Stopping SQL service: " $smo.ServiceName
 Stop-Service -Name $smo.ServiceName -Force
 
-# Move to F:\
+# Hack: Hardcoded location!
 $sqlFolderOnF = "F:\Environment\MSSQL\"
 if (!(Test-Path $sqlFolderOnF))
 {
@@ -69,8 +69,15 @@ if (!(Test-Path $sqlFolderOnF))
 
 ForEach ($mdf in $mdfsToCopy)
 {
-    Write-Host "Copy" $mdf "to" $sqlFolderOnF
-    Copy-Item -Path $mdf -Destination $sqlFolderOnF -Force
+    try
+    {
+        Write-Host "Copy" $mdf "to" $sqlFolderOnF
+        Copy-Item -Path $mdf -Destination $sqlFolderOnF -Force
+    }
+    catch
+    {
+        # This would throw an exception if there is already a file on F:
+	}
 }
 
 Write-Host "Done." -ForegroundColor Green
