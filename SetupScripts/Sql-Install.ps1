@@ -6,8 +6,7 @@ if (!(Test-Path $downloadDirectory)){
     # Write-Host "$global:foldPath Folder Created Successfully"
 }
 $SqlServerIsoImagePath = $downloadDirectory + "\sql_server_2016_developer_x64_dvd.iso"
-$client = new-object System.Net.WebClient
-$client.DownloadFile($SqlServerIsoImageDownloadUri, $SqlServerIsoImagePath)
+Invoke-WebRequest -URI $SqlServerIsoImageDownloadUri -OutFile $SqlServerIsoImagePath
 
 #Installs SQL Server locally with standard settings for Developers/Testers.
 # Install SQL from command line help - https://msdn.microsoft.com/en-us/library/ms144259.aspx
@@ -30,6 +29,7 @@ pop-location
 Dismount-DiskImage -ImagePath $SqlServerIsoImagePath
 
 #Install SQL Powershell module
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 Install-Module -Name SqlServer -Force
 
 #print Time taken to execute
