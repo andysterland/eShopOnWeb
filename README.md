@@ -1,7 +1,7 @@
 ![Build Status](https://github.com/dotnet-architecture/eShopOnWeb/workflows/eShopOnWeb%20Build%20and%20Test/badge.svg)
 
 
-[Create Environment](https://online.dev.core.vsengsaas.visualstudio.com/environments/new?name=eShopOnWebr&repo=andysterland/eShopOnWeb&instanceType=premiumWindows)
+[Create Environment](https://online.dev.core.vsengsaas.visualstudio.com/environments/new?name=eShopOnWeb&repo=andysterland/eShopOnWeb&instanceType=premiumWindows)
 
 # Microsoft eShopOnWeb ASP.NET Core Reference Application
 
