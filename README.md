@@ -3,7 +3,7 @@
 
 ## Getting started
 
-1. Use Visual Studio Online to [create an environment](https://online.dev.core.vsengsaas.visualstudio.com/environments/new?name=eShopOnWeb&repo=andysterland/eShopOnWeb&instanceType=premiumWindows)
+1. Use Visual Studio Online to [create an environment](https://online-ppe.core.vsengsaas.visualstudio.com/environments/new?name=eShopOnWeb&repo=andysterland/eShopOnWeb&instanceType=premiumWindows)
 1. Follow the setup instructions below
 1. Hit F5!
 
