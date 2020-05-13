@@ -44,17 +44,6 @@
   <ItemGroup>
     <None Include="compilerconfig.json" />
     <None Include="wwwroot\images\products\3ac72f74-7339-4ac7-8284-9ae64ce03f51.png" />
-    <None Include="wwwroot\images\products\10.png" />
-    <None Include="wwwroot\images\products\11.png" />
-    <None Include="wwwroot\images\products\12.png" />
-    <None Include="wwwroot\images\products\2.png" />
-    <None Include="wwwroot\images\products\3.png" />
-    <None Include="wwwroot\images\products\4.png" />
-    <None Include="wwwroot\images\products\5.png" />
-    <None Include="wwwroot\images\products\6.png" />
-    <None Include="wwwroot\images\products\7.png" />
-    <None Include="wwwroot\images\products\8.png" />
-    <None Include="wwwroot\images\products\9.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="appsettings.json">

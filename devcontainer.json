@@ -1,0 +1,10 @@
+{
+  "appPort": 1433,
+  "extensions": [
+  ],
+
+  "settings": {
+  },
+
+  "postCreateCommand": "Powershell.exe -executionpolicy remotesigned -File SetupScripts\\PostCloneSetup.ps1"  
+}
