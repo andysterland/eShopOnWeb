@@ -34,8 +34,6 @@ namespace Microsoft.eShopWeb.Web.Controllers.Api
             if (string.IsNullOrEmpty(id))
             {
                 return File(_imageNotFoundBytes, _imageMimeType);
-            }
-
             if(!Images.ContainsKey(id))
             {
                 string imagePath = Path.Combine(_env.WebRootPath, _imageBasePath, id);
