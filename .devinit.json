@@ -1,6 +1,9 @@
 {
   "run": [
     {
+      "tool": "require-mssql"
+    },
+    {
       "tool": "require-dotnetcoresdk"
     },
     {
