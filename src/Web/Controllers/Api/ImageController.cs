@@ -33,23 +33,24 @@ namespace Microsoft.eShopWeb.Web.Controllers.Api
         {
             if (string.IsNullOrEmpty(id))
             {
-                if(!Images.ContainsKey(id))
-                {
-                    string imagePath = Path.Combine(_env.WebRootPath, _imageBasePath, id);
-                    imagePath = Path.ChangeExtension(imagePath, _imageExtension);
-                    if(!System.IO.File.Exists(imagePath))
-                    {
-                        // Uh oh, no such image.
-                        return await Task.Run(() => File(_imageNotFoundBytes, _imageMimeType));
-                    }
-                    byte[] imageBytes = System.IO.File.ReadAllBytes(imagePath);
-
-                    Images.Add(id, imageBytes);
-                }
-
-                return await Task.Run(() => File(Images[id], _imageMimeType));
+                return await Task.Run(() => File(_imageNotFoundBytes, _imageMimeType));
             }
-            return await Task.Run(() => File(_imageNotFoundBytes, _imageMimeType));
+
+            if (!Images.ContainsKey(id))
+            {
+                string imagePath = Path.Combine(_env.WebRootPath, _imageBasePath, id);
+                imagePath = Path.ChangeExtension(imagePath, _imageExtension);
+                if (!System.IO.File.Exists(imagePath))
+                {
+                    // Uh oh, no such image.
+                    return await Task.Run(() => File(_imageNotFoundBytes, _imageMimeType));
+                }
+                byte[] imageBytes = System.IO.File.ReadAllBytes(imagePath);
+
+                Images.Add(id, imageBytes);
+            }
+
+            return await Task.Run(() => File(Images[id], _imageMimeType));
         }
     }
 }
