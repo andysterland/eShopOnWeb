@@ -10,7 +10,7 @@
     },
     {
       "tool": "choco-install",
-      "input": "sqllocaldb"
+      "input": "sql-server-express"
     }
   ]
 }
