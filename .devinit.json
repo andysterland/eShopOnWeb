@@ -7,6 +7,10 @@
       "tool": "dotnet-toolinstall",
       "input": "dotnet-ef",
       "additionalOptions": "--global"
+    },
+    {
+      "tool": "choco-install",
+      "input": "sqllocaldb"
     }
   ]
 }
