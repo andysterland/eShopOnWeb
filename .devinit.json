@@ -10,7 +10,7 @@
     },
     {
       "tool": "choco-install",
-      "input": "sql-server-2019"
+      "input": "sql-server-express"
     }
   ]
 }
